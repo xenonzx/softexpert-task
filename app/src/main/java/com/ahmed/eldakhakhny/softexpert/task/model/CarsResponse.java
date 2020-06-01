@@ -3,7 +3,7 @@ package com.ahmed.eldakhakhny.softexpert.task.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class CarsResponse {
 
@@ -12,7 +12,7 @@ public class CarsResponse {
     private Integer status;
     @SerializedName("cars")
     @Expose
-    private List<Car> cars = null;
+    private ArrayList<Car> cars = null;
     @SerializedName("error")
     @Expose
     private ServerError serverError;
@@ -25,11 +25,11 @@ public class CarsResponse {
         this.status = status;
     }
 
-    public List<Car> getCars() {
+    public ArrayList<Car> getCars() {
         return cars;
     }
 
-    public void setCars(List<Car> cars) {
+    public void setCars(ArrayList<Car> cars) {
         this.cars = cars;
     }
     public ServerError getServerError() {
