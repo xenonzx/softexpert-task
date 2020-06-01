@@ -5,7 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-public class MainActivity extends AppCompatActivity {
+import com.ahmed.eldakhakhny.softexpert.task.model.Car;
+import com.ahmed.eldakhakhny.softexpert.task.view.CarsListViewInterface;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity implements CarsListViewInterface {
     private EndlessRecyclerViewScrollListener scrollListener;
 
     @Override
@@ -26,6 +31,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loadNextDataFromApi(int offset) {
+        // TODO
+    }
 
+    @Override
+    public void onGetCarsResponse(ArrayList<Car> cars) {
+        // TODO append  cars and notify change
+    }
+
+    @Override
+    public void onError(Integer errorCode, String message) {
+        // TODO display server error response
+    }
+
+    @Override
+    public void onError() {
+        // TODO display default error message
+    }
+
+    @Override
+    public void onFailure() {
+        // TODO display default failure response
     }
 }

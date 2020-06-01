@@ -9,5 +9,4 @@ public interface CarsListViewInterface {
     void onError(Integer errorCode,String message);
     void onError();
     void onFailure();
-
 }
