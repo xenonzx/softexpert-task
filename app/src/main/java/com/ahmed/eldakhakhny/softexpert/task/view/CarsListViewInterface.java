@@ -6,7 +6,8 @@ import java.util.ArrayList;
 
 public interface CarsListViewInterface {
     void onGetCarsResponse(ArrayList<Car> cars);
-    void onError(String errorCode,String message);
-    void onFailure(String message);
+    void onError(Integer errorCode,String message);
+    void onError();
+    void onFailure();
 
 }
