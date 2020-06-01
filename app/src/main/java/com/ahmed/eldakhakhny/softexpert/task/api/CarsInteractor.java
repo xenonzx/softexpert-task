@@ -17,7 +17,7 @@ public class CarsInteractor {
 
     CarsService service = retrofit.create(CarsService.class);
 
-    void getCars(int page, final CarsListViewInterface view ){
+    public void getCars(int page, final CarsListViewInterface view ){
         service.listCars(page).enqueue(new Callback<CarsResponse>() {
             @Override
             public void onResponse(Call<CarsResponse> call, Response<CarsResponse> response) {

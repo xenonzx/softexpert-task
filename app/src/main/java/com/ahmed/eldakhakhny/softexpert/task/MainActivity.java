@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.ahmed.eldakhakhny.softexpert.task.api.CarsInteractor;
 import com.ahmed.eldakhakhny.softexpert.task.model.Car;
 import com.ahmed.eldakhakhny.softexpert.task.view.CarsListViewInterface;
 
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements CarsListViewInterface {
     private EndlessRecyclerViewScrollListener scrollListener;
-
+    private CarsInteractor carsInteractor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,14 @@ public class MainActivity extends AppCompatActivity implements CarsListViewInter
     }
 
     public void loadNextDataFromApi(int offset) {
-        // TODO
+        carsInteractor.getCars(offset, this);
+    }
+
+    void appendCars(ArrayList<Car> cars){
+
+    }
+    void restCarsList(){
+        //to be used with pull to refresh
     }
 
     @Override
