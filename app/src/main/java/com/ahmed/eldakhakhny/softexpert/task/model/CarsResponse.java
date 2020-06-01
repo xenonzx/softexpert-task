@@ -13,6 +13,9 @@ public class CarsResponse {
     @SerializedName("cars")
     @Expose
     private List<Car> cars = null;
+    @SerializedName("error")
+    @Expose
+    private ServerError serverError;
 
     public Integer getStatus() {
         return status;
@@ -29,4 +32,12 @@ public class CarsResponse {
     public void setCars(List<Car> cars) {
         this.cars = cars;
     }
+    public ServerError getServerError() {
+        return serverError;
+    }
+
+    public void setServerError(ServerError serverError) {
+        this.serverError = serverError;
+    }
+
 }
